@@ -4,7 +4,7 @@ SSH_KEY="~/.ssh/cicd-dc-oraclus-demo"
 
 .PHONY: all pull push
 
-all: ps logs up stop down pull
+all: ps logs up recreate stop down pull
 
 ps:
 	docker-compose ps
@@ -14,6 +14,9 @@ logs:
 
 up:
 	docker-compose up -d
+
+recreate:
+	docker-compose up -d --build --force-recreate
 
 stop:
 	docker-compose stop
