@@ -31,4 +31,8 @@ server {
         proxy_pass       http://www-demo-com/;
         proxy_redirect   off;
     }
+    location /static/ {
+        alias /home/ubuntu/dc-nginx-demo/static/;
+        expires 30d;
+    }
 }
