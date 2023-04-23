@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waterflow Word Effect</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #000;
+    }
+
+    .word {
+      font-size: 4rem;
+      font-family: sans-serif;
+      position: relative;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .word::before {
+      content: attr(data-text);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(0, 255, 255, 0.8) 50%, transparent 50%);
+      animation: waterflow 3s linear infinite;
+    }
+
+    @keyframes waterflow {
+      0% {
+        top: -100%;
+      }
+
+      100% {
+        top: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="word" data-text="Demo">Demo</div>
+</body>
+
+</html>
