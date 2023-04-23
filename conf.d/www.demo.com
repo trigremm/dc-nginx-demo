@@ -1,3 +1,4 @@
+# sudo cp conf.d/www.demo.com /etc/nginx/sites-available/www.demo.com
 # sudo ln -s /etc/nginx/sites-available/www.demo.com /etc/nginx/sites-enabled/www.demo.com
 # sudo rm -f /etc/nginx/sites-enabled/default
 # sudo nginx -t && sudo nginx -s reload
